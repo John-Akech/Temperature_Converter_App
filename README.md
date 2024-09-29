@@ -19,7 +19,7 @@ A development environment such as VSCode or Android Studio may suffice; however 
 
 1. Obtain copies of this repository or take them from the shown source.
    
-   git clone <repository-url>
+   git clone git@github.com:John-Akech/Temperature_Converter_App.git
 
 cd temperature_converter_app
 
