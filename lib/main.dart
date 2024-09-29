@@ -45,10 +45,11 @@ class _TemperatureConverterAppState extends State<TemperatureConverterApp> {
         appBar: AppBar(
             title: const Center(
               child: Text(
-                'Converter', style: TextStyle(color: Colors.white),
+                'Converter',
+                style: TextStyle(color: Colors.white),
               ),
-            ), backgroundColor: Colors.blueGrey,
-        ),
+            ),
+            backgroundColor: Colors.blueGrey),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -92,14 +93,15 @@ class _TemperatureConverterAppState extends State<TemperatureConverterApp> {
                   keyboardType: TextInputType.number,
                 ),
                 const SizedBox(height: 20),
-                // Non-editable output field
-                TextField(
-                  decoration: const InputDecoration(
-                    labelText: 'Converted temperature',
-                    border: OutlineInputBorder(),
-                  ),
-                  readOnly: true,
-                  controller: TextEditingController(text: convertedTemp),
+                // Non-editable output for converted temperature
+                const Text(
+                  'Converted temperature:',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  convertedTemp.isEmpty ? 'No conversion yet' : convertedTemp,
+                  style: const TextStyle(fontSize: 18, color: Colors.black),
                 ),
                 const SizedBox(height: 20),
                 // Convert button
